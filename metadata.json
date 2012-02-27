@@ -1,0 +1,6 @@
+{
+	"shell-version": ["3.2.2.1"],
+	"uuid": "messageorber@mibus.mibus.org",
+	"name": "MessageOrber",
+	"description": "Makes an Orb glow if you have a message waiting."
+}
