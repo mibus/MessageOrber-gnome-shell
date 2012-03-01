@@ -20,6 +20,7 @@
 const Main = imports.ui.main;
 const Gio = imports.gi.Gio;
 const MessageTray = imports.ui.messageTray;
+const Lang = imports.lang;
 
 let serialFile;
 let serialOutputStream;
@@ -50,10 +51,10 @@ function customSetCount(count, visible) {
 
 function init() {
 	serialFile = Gio.file_new_for_path('/tmp/pretend-serial-port');
+	originalSetCount = MessageTray.Source.prototype._setCount;
 }
 
 function enable() {
-	originalSetCount = MessageTray.Source.prototype._setCount;
 	MessageTray.Source.prototype._setCount = customSetCount;
 	serialOutputStream = serialFile.append_to(0,null);
 	updateCount();	
