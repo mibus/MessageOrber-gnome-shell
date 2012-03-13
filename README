@@ -1,1 +1,5 @@
-A GNOME3 shell extension to drive a (yet to be built! :) glowing orb, which glows based on the number of messages/alerts the shell has waiting for you.
+A GNOME3 shell extension to drive a glowing orb, which glows based on the number of messages/alerts the shell has waiting for you.
+
+Currently, a very basic Orb driver for Arduino exists here:
+	https://github.com/mibus/MessageOrbduino
+
