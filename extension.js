@@ -39,6 +39,7 @@ function updateCount() {
 	// Do something with "count" now...
 	print(serialOutputStream.write(""+count,null));
 	print(serialOutputStream.write("\n",null));
+	serialOutputStream.flush(null);
 }
 
 let originalSetCount;
